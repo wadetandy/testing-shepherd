@@ -3,3 +3,12 @@ image: ruby:2.3
 stages:
   - test
   - build
+
+build_artifact:
+  stage: build
+  script:
+    - echo 'Hello Shepherd' > artifact.txt
+  artifacts:
+    paths:
+      - artifact.txt
+
